@@ -33,7 +33,7 @@ class _CollectionPageState extends State<CollectionPage> {
   AsyncSnapshot<CollectionModel> asi, asc;
   final format = DateFormat("yyyy-MM-dd");
   SharedPreferences prefs;
-  String role;
+  String userType;
 
   @override
   initState(){
@@ -78,13 +78,13 @@ class _CollectionPageState extends State<CollectionPage> {
           //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardOperation()));
           // }
 
-          if(role == "Admin"){
+          if(userType == "Admin"){
             Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAdmin()));
           }
-          if(role == "Accounts"){
+          if(userType == "Accounts"){
             Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAccount()));
           }
-          if(role == "Operations"){
+          if(userType == "Operations"){
             Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardOperation()));
           }
         }
@@ -984,8 +984,8 @@ class _CollectionPageState extends State<CollectionPage> {
 
   Future<void> initRole() async {
     prefs = await SharedPreferences.getInstance();
-    role = prefs.getString('Role');
-    print("object role $role");
+    userType = prefs.getString('UserType');
+    print("object UserType $userType");
   }
 
 

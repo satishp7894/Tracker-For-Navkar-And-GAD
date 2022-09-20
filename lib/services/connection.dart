@@ -10,6 +10,7 @@ class Connection{
 
   //ips for ICD
   static String login = ip+"ValidateLogin";
+  static String loginNew = ipNew+"ValidateLoginCFS";
   static String detailIcd = ip+"GetDashboardICD";
   static String dmr = ip+"GetDMR";
   static String dmrNew = ipNew+"GetDMRYardIII";

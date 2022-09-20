@@ -284,36 +284,45 @@ class _LoginPageState extends State<LoginPage> with Validator{
       pr.style(message: 'Please wait...',
         progressWidget: Center(child: CircularProgressIndicator()),);
       pr.show();
-      var response = await http.post(Uri.parse(Connection.login), body: {
+      var response = await http.post(Uri.parse(Connection.loginNew), body: {
       'LoginID':name.text,
+        'Username':name.text,
       'Password':pass.text
       });
       var results = json.decode(response.body);
+      print('Connection.loginNew == ${Connection.loginNew}');
       print('response == $results  ${response.body}');
+      print('LoginID == ${name.text}');
+      print('Username == ${name.text}');
+      print('Password == ${pass.text}');
       pr.hide();
       if (results['UserID'] != null) {
         
         SharedPreferences preferences = await SharedPreferences.getInstance();
-        preferences.setInt('UserID', results['UserID']);
-        preferences.setString('EmpID', results['EmpID']);
-        preferences.setString('UserName', results['UserName']);
-        preferences.setString('UserType', results['UserType']);
-        preferences.setString('DeptType', results['DeptType']);
-        preferences.setString('ConCode', results['ConCode']);
-        preferences.setString('Role', results['Role']);
+        preferences.setInt('UserID', results['UserID'] ?? "");
+        preferences.setString('EmpID', results['EmpID'] ?? "");
+        preferences.setString('UserName', results['UserName'] ?? "");
+        preferences.setString('UserType', results['UserType'] ?? "");
+        preferences.setString('DeptType', results['DeptType'] ?? "");
+        preferences.setString('ConCode', results['ConCode'] ?? "");
+        preferences.setString('Role', results['Role'] ?? "");
         preferences.setBool('remember', remember);
 
-        String role = results['Role'];
-        print("object role $role");
-        globals.Role = role;
+        // String role = results['Role'];
+        // print("object role $role");
+        // globals.Role = role;
+
+        String userType = results['UserType'];
+        print("object userType $userType");
+        globals.UserType = userType;
 
 
 
-        if(role == "Admin"){
+        if(userType == "Admin"){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAdmin()), (Route<dynamic> route) => false);
-        } else if(role == "Operations"){
+        } else if(userType == "Operations"){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardOperation()), (Route<dynamic> route) => false);
-        } else if(role == "Accounts"){
+        } else if(userType == "Accounts"){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAccount()), (Route<dynamic> route) => false);
         }
       } else {
