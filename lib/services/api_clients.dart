@@ -32,8 +32,8 @@ class ApiClient {
   }
 
   Future<DmrModel> getDMRDetails() async {
-    var response = await http.get(Uri.parse(Connection.dmrNew));
-    print("url ${Connection.dmrNew}");
+    var response = await http.get(Uri.parse(Connection.dmr));
+    print("url ${Connection.dmr}");
     var result = json.decode(response.body);
 
     DmrModel _detailDmr;

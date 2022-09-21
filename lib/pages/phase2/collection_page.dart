@@ -164,644 +164,646 @@ class _CollectionPageState extends State<CollectionPage> {
                       return Container(
                         alignment: Alignment.topCenter,
                         child:
-                        asc.data.collection.isNotEmpty ? Container(
-                          padding: EdgeInsets.only(left: 10, right: 10, top: 10),
-                          child: Column(
-                            children: [
-                              Container(
-                                height: MediaQuery.of(context).size.height,
-                                child: HorizontalDataTable(
-                                  leftHandSideColumnWidth: 100,
-                                  rightHandSideColumnWidth: 800,
-                                  isFixedHeader: true,
-                                  headerWidgets:[
-                                    Container(
-                                        height: 50,
-                                        decoration: BoxDecoration(
-                                          color: Colors.green,
-                                          border: Border.all(color: Colors.white),),
-                                        child: Container(
-                                          child: Text('Events',
-                                            style: content1,
-                                            textAlign: TextAlign.center,),
-                                          alignment: Alignment.center,)),
-                                    // Expanded(
-                                    //   child: Container(
-                                    //     height: 50,
-                                    //     decoration: BoxDecoration(
-                                    //       color: Colors.green,
-                                    //       border: Border.all(color: Colors.white),
-                                    //     ),
-                                    //     child: Row(
-                                    //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                    //       mainAxisSize: MainAxisSize.min,
-                                    //       children: [
-                                    //         Expanded(
-                                    //           child: Container(
-                                    //             child: Text('Cash',
-                                    //               style: content1,
-                                    //               textAlign: TextAlign.center,),
-                                    //             alignment: Alignment.center,
-                                    //           ),
-                                    //         ),
-                                    //         Expanded(
-                                    //           child: Container(
-                                    //             child: Text('Cheque',
-                                    //               style: content1,
-                                    //               textAlign: TextAlign.center,),
-                                    //             alignment: Alignment.center,
-                                    //           ),
-                                    //         ),
-                                    //         Expanded(
-                                    //           child: Container(
-                                    //             child: Text('DD',
-                                    //               style: content1,
-                                    //               textAlign: TextAlign.center,),
-                                    //             alignment: Alignment.center,
-                                    //           ),
-                                    //         ),
-                                    //         Expanded(
-                                    //           child: Container(
-                                    //             child: Text('RTGS',
-                                    //               style: content1,
-                                    //               textAlign: TextAlign.center,),
-                                    //             alignment: Alignment.center,
-                                    //           ),
-                                    //         ),
-                                    //         Expanded(
-                                    //           child: Container(
-                                    //             child: Text('Total',
-                                    //               style: content1,
-                                    //               textAlign: TextAlign.center,),
-                                    //             alignment: Alignment.center,
-                                    //           ),
-                                    //         ),
-                                    //       ],
-                                    //     ),
-                                    //   ),
-                                    // ),
+                        asc.data.collection.isNotEmpty ?
 
+                        // Container(
+                        //   padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+                        //   child: Column(
+                        //     children: [
+                        //       Container(
+                        //         height: MediaQuery.of(context).size.height,
+                        //         child: HorizontalDataTable(
+                        //           leftHandSideColumnWidth: 100,
+                        //           rightHandSideColumnWidth: 800,
+                        //           isFixedHeader: true,
+                        //           headerWidgets:[
+                        //             Container(
+                        //                 height: 50,
+                        //                 decoration: BoxDecoration(
+                        //                   color: Colors.green,
+                        //                   border: Border.all(color: Colors.white),),
+                        //                 child: Container(
+                        //                   child: Text('Events',
+                        //                     style: content1,
+                        //                     textAlign: TextAlign.center,),
+                        //                   alignment: Alignment.center,)),
+                        //             // Expanded(
+                        //             //   child: Container(
+                        //             //     height: 50,
+                        //             //     decoration: BoxDecoration(
+                        //             //       color: Colors.green,
+                        //             //       border: Border.all(color: Colors.white),
+                        //             //     ),
+                        //             //     child: Row(
+                        //             //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //             //       mainAxisSize: MainAxisSize.min,
+                        //             //       children: [
+                        //             //         Expanded(
+                        //             //           child: Container(
+                        //             //             child: Text('Cash',
+                        //             //               style: content1,
+                        //             //               textAlign: TextAlign.center,),
+                        //             //             alignment: Alignment.center,
+                        //             //           ),
+                        //             //         ),
+                        //             //         Expanded(
+                        //             //           child: Container(
+                        //             //             child: Text('Cheque',
+                        //             //               style: content1,
+                        //             //               textAlign: TextAlign.center,),
+                        //             //             alignment: Alignment.center,
+                        //             //           ),
+                        //             //         ),
+                        //             //         Expanded(
+                        //             //           child: Container(
+                        //             //             child: Text('DD',
+                        //             //               style: content1,
+                        //             //               textAlign: TextAlign.center,),
+                        //             //             alignment: Alignment.center,
+                        //             //           ),
+                        //             //         ),
+                        //             //         Expanded(
+                        //             //           child: Container(
+                        //             //             child: Text('RTGS',
+                        //             //               style: content1,
+                        //             //               textAlign: TextAlign.center,),
+                        //             //             alignment: Alignment.center,
+                        //             //           ),
+                        //             //         ),
+                        //             //         Expanded(
+                        //             //           child: Container(
+                        //             //             child: Text('Total',
+                        //             //               style: content1,
+                        //             //               textAlign: TextAlign.center,),
+                        //             //             alignment: Alignment.center,
+                        //             //           ),
+                        //             //         ),
+                        //             //       ],
+                        //             //     ),
+                        //             //   ),
+                        //             // ),
+                        //
+                        //             Container(
+                        //               height: 50,
+                        //               // decoration: BoxDecoration(
+                        //               //   color: Colors.green,
+                        //               //   border: Border.all(color: Colors.white),
+                        //               // ),
+                        //               child: Row(
+                        //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //                 mainAxisSize: MainAxisSize.min,
+                        //                 children: [
+                        //                   Container(
+                        //                     child: Text('Cash',
+                        //                       style: content1,
+                        //                       textAlign: TextAlign.center,),
+                        //                     alignment: Alignment.center,
+                        //                     width: 160,
+                        //                     decoration: const BoxDecoration(
+                        //                         color: Colors.green,
+                        //                         border: Border(
+                        //                           right: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           top:  BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           bottom: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                         )
+                        //                       // border: Border.all(color: Colors.white),
+                        //                     ),
+                        //                   ),
+                        //                   Container(
+                        //                     child: Text('Cheque',
+                        //                       style: content1,
+                        //                       textAlign: TextAlign.center,),
+                        //                     alignment: Alignment.center,
+                        //                     width: 160,
+                        //                     decoration: const BoxDecoration(
+                        //                         color: Colors.green,
+                        //                         border: Border(
+                        //                           right: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           top:  BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           bottom: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                         )
+                        //                       // border: Border.all(color: Colors.white),
+                        //                     ),
+                        //                   ),
+                        //                   Container(
+                        //                     child: Text('DD',
+                        //                       style: content1,
+                        //                       textAlign: TextAlign.center,),
+                        //                     alignment: Alignment.center,
+                        //                     width: 160,
+                        //                     decoration: const BoxDecoration(
+                        //                         color: Colors.green,
+                        //                         border: Border(
+                        //                           right: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           top:  BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           bottom: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                         )
+                        //                       // border: Border.all(color: Colors.white),
+                        //                     ),
+                        //                   ),
+                        //                   Container(
+                        //                     child: Text('RTGS',
+                        //                       style: content1,
+                        //                       textAlign: TextAlign.center,),
+                        //                     alignment: Alignment.center,
+                        //                     width: 160,
+                        //                     decoration: const BoxDecoration(
+                        //                         color: Colors.green,
+                        //                         border: Border(
+                        //                           right: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           top:  BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           bottom: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                         )
+                        //                       // border: Border.all(color: Colors.white),
+                        //                     ),
+                        //                   ),
+                        //                   Container(
+                        //                     child: Text('Total',
+                        //                       style: content1,
+                        //                       textAlign: TextAlign.center,),
+                        //                     alignment: Alignment.center,
+                        //                     width: 160,
+                        //                     decoration: const BoxDecoration(
+                        //                         color: Colors.green,
+                        //                         border: Border(
+                        //                           right: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           top:  BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                           bottom: BorderSide( //                   <--- right side
+                        //                             color: Colors.white,
+                        //                           ),
+                        //                         )
+                        //                       // border: Border.all(color: Colors.white),
+                        //                     ),
+                        //                   ),
+                        //                 ],
+                        //               ),
+                        //             ),
+                        //           ],
+                        //           leftSideItemBuilder: _generateFirstColumnRow1,
+                        //           rightSideItemBuilder: _generateRightHandSideColumnRow1,
+                        //           itemCount: asc.data.collection.length,
+                        //           rightHandSideColBackgroundColor: Colors.black,
+                        //           leftHandSideColBackgroundColor: Colors.black,
+                        //         ),
+                        //       ),
+                        //       SizedBox(height: 20,),
+                        //     ],),
+                        // ): Container(),
+
+                        DescriptionView(
+                            children : [
+                              asi.data.collection.isNotEmpty ? Container(
+                                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+                                child: Column(
+                                  children: [
                                     Container(
-                                      height: 50,
-                                      // decoration: BoxDecoration(
-                                      //   color: Colors.green,
-                                      //   border: Border.all(color: Colors.white),
-                                      // ),
-                                      child: Row(
-                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
+                                      height: MediaQuery.of(context).size.height,
+                                      child: HorizontalDataTable(
+                                        leftHandSideColumnWidth: 100,
+                                        rightHandSideColumnWidth: 800,
+                                        isFixedHeader: true,
+                                        headerWidgets:[
                                           Container(
-                                            child: Text('Cash',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                            width: 160,
-                                            decoration: const BoxDecoration(
+                                              height: 50,
+                                              decoration: BoxDecoration(
                                                 color: Colors.green,
-                                                border: Border(
-                                                  right: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                border: Border.all(color: Colors.white),),
+                                              child: Container(
+                                                child: Text('Events',
+                                                  style: content1,
+                                                  textAlign: TextAlign.center,),
+                                                alignment: Alignment.center,)),
+                                          // Expanded(
+                                          //   child: Container(
+                                          //     height: 50,
+                                          //     decoration: BoxDecoration(
+                                          //       color: Colors.green,
+                                          //       border: Border.all(color: Colors.white),
+                                          //     ),
+                                          //     child: Row(
+                                          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          //       mainAxisSize: MainAxisSize.min,
+                                          //       children: [
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('Cash',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('Cheque',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('DD',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('RTGS',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('Total',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //       ],
+                                          //     ),
+                                          //   ),
+                                          // ),
+                                          Container(
+                                            height: 50,
+                                            // decoration: BoxDecoration(
+                                            //   color: Colors.green,
+                                            //   border: Border.all(color: Colors.white),
+                                            // ),
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Container(
+                                                  child: Text('Cash',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                  top:  BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                ),
+                                                Container(
+                                                  child: Text('Cheque',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                  bottom: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                ),
+                                                Container(
+                                                  child: Text('DD',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                )
-                                              // border: Border.all(color: Colors.white),
+                                                ),
+                                                Container(
+                                                  child: Text('RTGS',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  child: Text('Total',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
+                                                  ),
+                                                ),
+                                              ],
                                             ),
                                           ),
+
+                                        ],
+                                        leftSideItemBuilder: _generateFirstColumnRow,
+                                        rightSideItemBuilder: _generateRightHandSideColumnRow,
+                                        itemCount: asi.data.collection.length,
+                                        rightHandSideColBackgroundColor: Colors.black,
+                                        leftHandSideColBackgroundColor: Colors.black,
+                                      ),
+                                      ),
+                                    SizedBox(height: 20,),
+                                  ],),
+                              ): Container(),
+                              asc.data.collection.isNotEmpty ? Container(
+                                padding: EdgeInsets.only(left: 10, right: 10, top: 10),
+                                child: Column(
+                                  children: [
+                                    Container(
+                                      height: MediaQuery.of(context).size.height,
+                                      child: HorizontalDataTable(
+                                        leftHandSideColumnWidth: 100,
+                                        rightHandSideColumnWidth: 800,
+                                        isFixedHeader: true,
+                                        headerWidgets:[
                                           Container(
-                                            child: Text('Cheque',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                            width: 160,
-                                            decoration: const BoxDecoration(
+                                              height: 50,
+                                              decoration: BoxDecoration(
                                                 color: Colors.green,
-                                                border: Border(
-                                                  right: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                  top:  BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                  bottom: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                )
-                                              // border: Border.all(color: Colors.white),
-                                            ),
-                                          ),
+                                                border: Border.all(color: Colors.white),),
+                                              child: Container(
+                                                child: Text('Events',
+                                                  style: content1,
+                                                  textAlign: TextAlign.center,),
+                                                alignment: Alignment.center,)),
+                                          // Expanded(
+                                          //   child: Container(
+                                          //     height: 50,
+                                          //     decoration: BoxDecoration(
+                                          //       color: Colors.green,
+                                          //       border: Border.all(color: Colors.white),
+                                          //     ),
+                                          //     child: Row(
+                                          //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          //       mainAxisSize: MainAxisSize.min,
+                                          //       children: [
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('Cash',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('Cheque',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('DD',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('RTGS',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //         Expanded(
+                                          //           child: Container(
+                                          //             child: Text('Total',
+                                          //               style: content1,
+                                          //               textAlign: TextAlign.center,),
+                                          //             alignment: Alignment.center,
+                                          //           ),
+                                          //         ),
+                                          //       ],
+                                          //     ),
+                                          //   ),
+                                          // ),
+
                                           Container(
-                                            child: Text('DD',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                            width: 160,
-                                            decoration: const BoxDecoration(
-                                                color: Colors.green,
-                                                border: Border(
-                                                  right: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                            height: 50,
+                                            // decoration: BoxDecoration(
+                                            //   color: Colors.green,
+                                            //   border: Border.all(color: Colors.white),
+                                            // ),
+                                            child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Container(
+                                                  child: Text('Cash',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                  top:  BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                ),
+                                                Container(
+                                                  child: Text('Cheque',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                  bottom: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                ),
+                                                Container(
+                                                  child: Text('DD',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                )
-                                              // border: Border.all(color: Colors.white),
-                                            ),
-                                          ),
-                                          Container(
-                                            child: Text('RTGS',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                            width: 160,
-                                            decoration: const BoxDecoration(
-                                                color: Colors.green,
-                                                border: Border(
-                                                  right: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                ),
+                                                Container(
+                                                  child: Text('RTGS',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                  top:  BorderSide( //                   <--- right side
-                                                    color: Colors.white,
+                                                ),
+                                                Container(
+                                                  child: Text('Total',
+                                                    style: content1,
+                                                    textAlign: TextAlign.center,),
+                                                  alignment: Alignment.center,
+                                                  width: 160,
+                                                  decoration: const BoxDecoration(
+                                                      color: Colors.green,
+                                                      border: Border(
+                                                        right: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        top:  BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                        bottom: BorderSide( //                   <--- right side
+                                                          color: Colors.white,
+                                                        ),
+                                                      )
+                                                    // border: Border.all(color: Colors.white),
                                                   ),
-                                                  bottom: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                )
-                                              // border: Border.all(color: Colors.white),
-                                            ),
-                                          ),
-                                          Container(
-                                            child: Text('Total',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,
-                                            width: 160,
-                                            decoration: const BoxDecoration(
-                                                color: Colors.green,
-                                                border: Border(
-                                                  right: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                  top:  BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                  bottom: BorderSide( //                   <--- right side
-                                                    color: Colors.white,
-                                                  ),
-                                                )
-                                              // border: Border.all(color: Colors.white),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ],
+                                        leftSideItemBuilder: _generateFirstColumnRow1,
+                                        rightSideItemBuilder: _generateRightHandSideColumnRow1,
+                                        itemCount: asc.data.collection.length,
+                                        rightHandSideColBackgroundColor: Colors.black,
+                                        leftHandSideColBackgroundColor: Colors.black,
                                       ),
                                     ),
-                                  ],
-                                  leftSideItemBuilder: _generateFirstColumnRow1,
-                                  rightSideItemBuilder: _generateRightHandSideColumnRow1,
-                                  itemCount: asc.data.collection.length,
-                                  rightHandSideColBackgroundColor: Colors.black,
-                                  leftHandSideColBackgroundColor: Colors.black,
-                                ),
-                              ),
-                              SizedBox(height: 20,),
-                            ],),
-                        ): Container(),
-
-                        // DescriptionView(
-                        //     children : [
-                        //       asi.data.collection.isNotEmpty ? Container(
-                        //         padding: EdgeInsets.only(left: 10, right: 10, top: 10),
-                        //         child: Column(
-                        //           children: [
-                        //             Container(
-                        //               height: MediaQuery.of(context).size.height,
-                        //               child: HorizontalDataTable(
-                        //                 leftHandSideColumnWidth: 100,
-                        //                 rightHandSideColumnWidth: 800,
-                        //                 isFixedHeader: true,
-                        //                 headerWidgets:[
-                        //                   Container(
-                        //                       height: 50,
-                        //                       decoration: BoxDecoration(
-                        //                         color: Colors.green,
-                        //                         border: Border.all(color: Colors.white),),
-                        //                       child: Container(
-                        //                         child: Text('Events',
-                        //                           style: content1,
-                        //                           textAlign: TextAlign.center,),
-                        //                         alignment: Alignment.center,)),
-                        //                   // Expanded(
-                        //                   //   child: Container(
-                        //                   //     height: 50,
-                        //                   //     decoration: BoxDecoration(
-                        //                   //       color: Colors.green,
-                        //                   //       border: Border.all(color: Colors.white),
-                        //                   //     ),
-                        //                   //     child: Row(
-                        //                   //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //                   //       mainAxisSize: MainAxisSize.min,
-                        //                   //       children: [
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('Cash',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('Cheque',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('DD',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('RTGS',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('Total',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //       ],
-                        //                   //     ),
-                        //                   //   ),
-                        //                   // ),
-                        //                   Container(
-                        //                     height: 50,
-                        //                     // decoration: BoxDecoration(
-                        //                     //   color: Colors.green,
-                        //                     //   border: Border.all(color: Colors.white),
-                        //                     // ),
-                        //                     child: Row(
-                        //                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //                       mainAxisSize: MainAxisSize.min,
-                        //                       children: [
-                        //                         Container(
-                        //                           child: Text('Cash',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('Cheque',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('DD',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('RTGS',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('Total',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                       ],
-                        //                     ),
-                        //                   ),
-                        //
-                        //                 ],
-                        //                 leftSideItemBuilder: _generateFirstColumnRow,
-                        //                 rightSideItemBuilder: _generateRightHandSideColumnRow,
-                        //                 itemCount: asi.data.collection.length,
-                        //                 rightHandSideColBackgroundColor: Colors.black,
-                        //                 leftHandSideColBackgroundColor: Colors.black,
-                        //               ),
-                        //               ),
-                        //             SizedBox(height: 20,),
-                        //           ],),
-                        //       ): Container(),
-                        //       asc.data.collection.isNotEmpty ? Container(
-                        //         padding: EdgeInsets.only(left: 10, right: 10, top: 10),
-                        //         child: Column(
-                        //           children: [
-                        //             Container(
-                        //               height: MediaQuery.of(context).size.height,
-                        //               child: HorizontalDataTable(
-                        //                 leftHandSideColumnWidth: 100,
-                        //                 rightHandSideColumnWidth: 800,
-                        //                 isFixedHeader: true,
-                        //                 headerWidgets:[
-                        //                   Container(
-                        //                       height: 50,
-                        //                       decoration: BoxDecoration(
-                        //                         color: Colors.green,
-                        //                         border: Border.all(color: Colors.white),),
-                        //                       child: Container(
-                        //                         child: Text('Events',
-                        //                           style: content1,
-                        //                           textAlign: TextAlign.center,),
-                        //                         alignment: Alignment.center,)),
-                        //                   // Expanded(
-                        //                   //   child: Container(
-                        //                   //     height: 50,
-                        //                   //     decoration: BoxDecoration(
-                        //                   //       color: Colors.green,
-                        //                   //       border: Border.all(color: Colors.white),
-                        //                   //     ),
-                        //                   //     child: Row(
-                        //                   //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //                   //       mainAxisSize: MainAxisSize.min,
-                        //                   //       children: [
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('Cash',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('Cheque',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('DD',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('RTGS',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //         Expanded(
-                        //                   //           child: Container(
-                        //                   //             child: Text('Total',
-                        //                   //               style: content1,
-                        //                   //               textAlign: TextAlign.center,),
-                        //                   //             alignment: Alignment.center,
-                        //                   //           ),
-                        //                   //         ),
-                        //                   //       ],
-                        //                   //     ),
-                        //                   //   ),
-                        //                   // ),
-                        //
-                        //                   Container(
-                        //                     height: 50,
-                        //                     // decoration: BoxDecoration(
-                        //                     //   color: Colors.green,
-                        //                     //   border: Border.all(color: Colors.white),
-                        //                     // ),
-                        //                     child: Row(
-                        //                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        //                       mainAxisSize: MainAxisSize.min,
-                        //                       children: [
-                        //                         Container(
-                        //                           child: Text('Cash',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('Cheque',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('DD',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('RTGS',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                         Container(
-                        //                           child: Text('Total',
-                        //                             style: content1,
-                        //                             textAlign: TextAlign.center,),
-                        //                           alignment: Alignment.center,
-                        //                           width: 160,
-                        //                           decoration: const BoxDecoration(
-                        //                               color: Colors.green,
-                        //                               border: Border(
-                        //                                 right: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 top:  BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                                 bottom: BorderSide( //                   <--- right side
-                        //                                   color: Colors.white,
-                        //                                 ),
-                        //                               )
-                        //                             // border: Border.all(color: Colors.white),
-                        //                           ),
-                        //                         ),
-                        //                       ],
-                        //                     ),
-                        //                   ),
-                        //                 ],
-                        //                 leftSideItemBuilder: _generateFirstColumnRow1,
-                        //                 rightSideItemBuilder: _generateRightHandSideColumnRow1,
-                        //                 itemCount: asc.data.collection.length,
-                        //                 rightHandSideColBackgroundColor: Colors.black,
-                        //                 leftHandSideColBackgroundColor: Colors.black,
-                        //               ),
-                        //             ),
-                        //             SizedBox(height: 20,),
-                        //           ],),
-                        //       ): Container(),
-                        //     ]
-                        // ),
+                                    SizedBox(height: 20,),
+                                  ],),
+                              ): Container(),
+                            ]
+                        ):Container(),
                       );
                     }
                 );

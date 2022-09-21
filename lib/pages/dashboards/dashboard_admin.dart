@@ -70,50 +70,49 @@ class _DashboardAdminState extends State<DashboardAdmin>{
             mainAxisSpacing: 10.0,
             //padding: EdgeInsets.all(8),
             children: <Widget>[
-              // StaggeredGridTile.fit(crossAxisCellCount: 2, child:
-              // _buildTile(
-              //   Container(
-              //     height:100,
-              //
-              //   child: Padding(
-              //     padding: const EdgeInsets.all(20),
-              //     child: Row(
-              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //         crossAxisAlignment: CrossAxisAlignment.center,
-              //         mainAxisSize: MainAxisSize.min,
-              //         children: <Widget>[
-              //           Column(
-              //             mainAxisAlignment: MainAxisAlignment.center,
-              //             crossAxisAlignment: CrossAxisAlignment.start,
-              //             children: <Widget>[
-              //               //Text('Container Freight Stations', style: TextStyle(color: Colors.blueAccent)),
-              //               Text('Combined\nMovement Report',
-              //                 //textAlign: TextAlign.center,
-              //                 style: GoogleFonts.montserrat(
-              //                     textStyle: TextStyle(
-              //                       fontSize: 20,
-              //                       fontWeight: FontWeight.w500,
-              //                       color: Colors.black,)),
-              //               )
-              //             ],
-              //           ),
-              //           Material(
-              //               color: Colors.blue,
-              //               shape: CircleBorder(),
-              //               child: Center(
-              //                   child: Padding(
-              //                     padding: const EdgeInsets.all(8),
-              //                     child: Icon(MyFlutterApp.container, color: Colors.white, size: 45.0),
-              //                   )
-              //               )
-              //           )
-              //         ]
-              //     ),
-              //   )),
-              //   onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CombinePage())),
-              // )),
-              SizedBox(height: 3,),
-          StaggeredGridTile.fit(crossAxisCellCount: 2,
+              StaggeredGridTile.fit(crossAxisCellCount: 2, child:
+              _buildTile(
+                Container(
+                  height:100,
+
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            //Text('Container Freight Stations', style: TextStyle(color: Colors.blueAccent)),
+                            Text('Combined\nMovement Report',
+                              //textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                  textStyle: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,)),
+                            )
+                          ],
+                        ),
+                        Material(
+                            color: Colors.blue,
+                            shape: CircleBorder(),
+                            child: Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(8),
+                                  child: Icon(MyFlutterApp.container, color: Colors.white, size: 45.0),
+                                )
+                            )
+                        )
+                      ]
+                  ),
+                )),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CombinePage())),
+              )),
+          StaggeredGridTile.fit(crossAxisCellCount: 1,
             child:_buildTile(
                 Padding(
                   padding: const EdgeInsets.all(10),
@@ -144,37 +143,37 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                 ),
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => DmrPage())),
               )),
-          // StaggeredGridTile.fit(crossAxisCellCount: 1,
-          //   child:_buildTile(
-          //       Padding(
-          //         padding: const EdgeInsets.all(20),
-          //         child: Column(
-          //             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          //             crossAxisAlignment: CrossAxisAlignment.center,
-          //             children: <Widget>[
-          //               Material(
-          //                   color: Colors.redAccent,
-          //                   shape: CircleBorder(),
-          //                   child: Center(
-          //                       child: Padding(
-          //                         padding: const EdgeInsets.all(10),
-          //                         child: SvgPicture.asset("assets/indian.svg",height: 45,width: 45,color: Colors.white,),
-          //                       )
-          //                   )
-          //               ),
-          //               Text('Outstanding',
-          //                 textAlign: TextAlign.center,
-          //                 style: GoogleFonts.montserrat(
-          //                     textStyle: TextStyle(
-          //                       fontSize: 20,
-          //                       fontWeight: FontWeight.w500,
-          //                       color: Colors.black,)),
-          //               ),
-          //             ]
-          //         ),
-          //       ),
-          //       onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => OutStandingPage())),
-          //   )),
+          StaggeredGridTile.fit(crossAxisCellCount: 1,
+            child:_buildTile(
+                Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Material(
+                            color: Colors.redAccent,
+                            shape: CircleBorder(),
+                            child: Center(
+                                child: Padding(
+                                  padding: const EdgeInsets.all(10),
+                                  child: SvgPicture.asset("assets/indian.svg",height: 45,width: 45,color: Colors.white,),
+                                )
+                            )
+                        ),
+                        Text('Outstanding',
+                          textAlign: TextAlign.center,
+                          style: GoogleFonts.montserrat(
+                              textStyle: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,)),
+                        ),
+                      ]
+                  ),
+                ),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => OutStandingPage())),
+            )),
           StaggeredGridTile.fit(crossAxisCellCount: 1,
             child:_buildTile(
                 Padding(
@@ -244,42 +243,42 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                   Navigator.of(context).push(MaterialPageRoute(builder: (_) => CollectionPage(date: formattedDate, page: 0,)));
                   }
             )),
-          // StaggeredGridTile.fit(crossAxisCellCount: 2,
-          //   child:_buildTile(
-          //       Padding(
-          //         padding: const EdgeInsets.all(10),
-          //         child: Row(
-          //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          //           crossAxisAlignment: CrossAxisAlignment.center,
-          //           children: [
-          //             Column(
-          //                 mainAxisAlignment: MainAxisAlignment.center,
-          //                 crossAxisAlignment: CrossAxisAlignment.start,
-          //                 children: <Widget>[
-          //                   Text('Sales Person\nPerformance',
-          //                     //textAlign: TextAlign.center,
-          //                     style: GoogleFonts.montserrat(
-          //                         textStyle: TextStyle(
-          //                           fontSize: 20,
-          //                           fontWeight: FontWeight.w500,
-          //                           color: Colors.black,)),
-          //                   ),
-          //                 ]
-          //             ),
-          //             Material(
-          //                 color: Colors.amberAccent,
-          //                 shape: CircleBorder(),
-          //                 child: Center(
-          //                     child: Padding(
-          //                       padding: const EdgeInsets.all(10),
-          //                       child: Icon(MyFlutterApp.person, color: Colors.white, size: 45.0),                                )
-          //                 )
-          //             ),
-          //           ],
-          //         ),
-          //       ),
-          //       onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => PerformancePage())),
-          //   )),
+          StaggeredGridTile.fit(crossAxisCellCount: 2,
+            child:_buildTile(
+                Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text('Sales Person\nPerformance',
+                              //textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                  textStyle: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,)),
+                            ),
+                          ]
+                      ),
+                      Material(
+                          color: Colors.amberAccent,
+                          shape: CircleBorder(),
+                          child: Center(
+                              child: Padding(
+                                padding: const EdgeInsets.all(10),
+                                child: Icon(MyFlutterApp.person, color: Colors.white, size: 45.0),                                )
+                          )
+                      ),
+                    ],
+                  ),
+                ),
+                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => PerformancePage())),
+            )),
             ],
             /*staggeredTiles: [
               StaggeredTile.extent(2, 100.0),
@@ -297,7 +296,7 @@ class _DashboardAdminState extends State<DashboardAdmin>{
               color: Colors.black54,
               height: 20,
               width: double.infinity,
-              child: Text("tracker for GAD  version: $versionName",
+              child: Text("tracker for Navkar  version: $versionName",
               style:
               GoogleFonts.montserrat(
                   textStyle: TextStyle(

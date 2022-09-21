@@ -3,7 +3,7 @@
     package="com.example.navkar_tracker">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="tracker for GAD"
+        android:label="tracker for Navkar"
         android:name="${applicationName}"
         tools:ignore="AllowBackup"
         android:usesCleartextTraffic="true"
