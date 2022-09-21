@@ -312,19 +312,19 @@ class _LoginPageState extends State<LoginPage> with Validator{
         // print("object role $role");
         // globals.Role = role;
 
-        String userType = results['UserType'];
-        print("object userType $userType");
-        globals.UserType = userType;
+        // String userType = results['UserType'];
+        // print("object userType $userType");
+        // globals.UserType = userType;
 
 
 
-        if(userType == "Admin"){
+       // if(userType == "Admin"){
           Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAdmin()), (Route<dynamic> route) => false);
-        } else if(userType == "Operations"){
-          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardOperation()), (Route<dynamic> route) => false);
-        } else if(userType == "Accounts"){
-          Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAccount()), (Route<dynamic> route) => false);
-        }
+        // } else if(userType == "Operations"){
+        //   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardOperation()), (Route<dynamic> route) => false);
+        // } else if(userType == "Accounts"){
+        //   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAccount()), (Route<dynamic> route) => false);
+        // }
       } else {
         Alerts.showAlertAndBack(context, "Login Failed", "Incorrect Name or Password");
       }
