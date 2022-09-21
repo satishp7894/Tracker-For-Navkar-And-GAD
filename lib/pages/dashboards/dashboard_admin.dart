@@ -112,36 +112,43 @@ class _DashboardAdminState extends State<DashboardAdmin>{
               // )),
               SizedBox(height: 10,),
 
-              Container(height: 150,
+              Container(
+                  height: 150,
 
                   child:_buildTile(
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: Column(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: <Widget>[
-                            Material(
-                                color: Colors.lime,
-                                shape: CircleBorder(),
-                                child: Center(
-                                    child: Padding(
-                                        padding: const EdgeInsets.all(8),
-                                        child: Image.asset("assets/glance.png",height: 50,width: 50,)
-                                      // Icon(MyFlutterApp.shipping_container, color: Colors.white, size: 45.0),
+                    Column(
+                      children: [
+                        SizedBox(height: 15,),
+                        Padding(
+                          padding: const EdgeInsets.all(0),
+                          child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Material(
+                                    color: Colors.lime,
+                                    shape: CircleBorder(),
+                                    child: Center(
+                                        child: Padding(
+                                            padding: const EdgeInsets.all(8),
+                                            child: Image.asset("assets/glance.png",height: 50,width: 50,)
+                                          // Icon(MyFlutterApp.shipping_container, color: Colors.white, size: 45.0),
+                                        )
                                     )
-                                )
-                            ),
-                            Text('Today\'s\nAt a Glance',
-                              textAlign: TextAlign.center,
-                              style: GoogleFonts.montserrat(
-                                  textStyle: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black,)),
-                            ),
-                          ]
-                      ),
+                                ),
+                                SizedBox(height: 10,),
+                                Text('Today\'s\nAt a Glance',
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.montserrat(
+                                      textStyle: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,)),
+                                ),
+                              ]
+                          ),
+                        ),
+                      ],
                     ),
                     onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => DmrPage())),
                   )),
@@ -182,35 +189,41 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                     height: 150,
                     width: MediaQuery.of(context).size.width/2-5,
                     child:_buildTile(
-                      Padding(
-                        padding: const EdgeInsets.all(10),
-                        child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisSize: MainAxisSize.min,
-                            children: <Widget>[
-                              Material(
-                                  color: Colors.deepPurpleAccent,
-                                  shape: CircleBorder(),
-                                  child: Center(
-                                      child: Padding(
-                                          padding: const EdgeInsets.all(8),
-                                          child:
-                                          Image.asset("assets/billing.png",height: 50,width: 50,)
-                                        // Icon(MyFlutterApp.description, color: Colors.white, size: 30.0),
+                      Column(
+                        children: [
+                          SizedBox(height: 15,),
+                          Padding(
+                            padding: const EdgeInsets.all(0),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisSize: MainAxisSize.min,
+                                children: <Widget>[
+                                  Material(
+                                      color: Colors.deepPurpleAccent,
+                                      shape: CircleBorder(),
+                                      child: Center(
+                                          child: Padding(
+                                              padding: const EdgeInsets.all(8),
+                                              child:
+                                              Image.asset("assets/billing.png",height: 50,width: 50,)
+                                            // Icon(MyFlutterApp.description, color: Colors.white, size: 30.0),
+                                          )
                                       )
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text('Last 12 Months\' Billing',
+                                    textAlign: TextAlign.center,
+                                    style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black,)),
                                   )
-                              ),
-                              Text('Last 12 Months\' Billing',
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,)),
-                              )
-                            ]
-                        ),
+                                ]
+                            ),
+                          ),
+                        ],
                       ),
                       onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => BillingPage())),
                     )),
@@ -221,34 +234,39 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                     child:
 
                     _buildTile(
-                        Padding(
-                          padding: const EdgeInsets.all(15),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: <Widget>[
-                              Material(
-                                  color: Colors.redAccent.shade700,
-                                  shape: CircleBorder(),
-                                  child: Center(
-                                      child: Padding(
-                                          padding: const EdgeInsets.all(15),
-                                          child: Image.asset("assets/collections.png",height: 38,width: 38,)
-                                        // Icon(MyFlutterApp.collections, color: Colors.white, size: 30.0),
+                        Column(
+                          children: [
+                            SizedBox(height: 15,),
+                            Padding(
+                              padding: const EdgeInsets.all(0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: <Widget>[
+                                  Material(
+                                      color: Colors.redAccent.shade700,
+                                      shape: CircleBorder(),
+                                      child: Center(
+                                          child: Padding(
+                                              padding: const EdgeInsets.all(10),
+                                              child: Image.asset("assets/collections.png",height: 47,width: 47,)
+                                            // Icon(MyFlutterApp.collections, color: Colors.white, size: 30.0),
+                                          )
                                       )
+                                  ),
+                                  SizedBox(height: 10,),
+                                  Text('Collections',
+                                    //textAlign: TextAlign.center,
+                                    style: GoogleFonts.montserrat(
+                                        textStyle: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.w500,
+                                          color: Colors.black,)),
                                   )
+                                ],
                               ),
-
-                              Text('Collections',
-                                //textAlign: TextAlign.center,
-                                style: GoogleFonts.montserrat(
-                                    textStyle: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.w500,
-                                      color: Colors.black,)),
-                              )
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                         onTap: () {
                           var now = new DateTime.now();
