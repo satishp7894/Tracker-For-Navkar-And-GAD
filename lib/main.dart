@@ -19,16 +19,16 @@ void main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
   print("remember value is${prefs.getBool('remember')}");
   bool remember = prefs.getBool('remember');
-  String role = prefs.getString('Role');
-
-  print("object role $role");
+  // String role = prefs.getString('Role');
+  String userType = prefs.getString('UserType');
+  print("object userType $userType");
 
   if (remember != null) {
-    if(role == "Admin"){
+    if(userType == "Admin"){
       runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ?  DashboardAdmin() :  IntroPage()));
-    } else if(role == "Operations"){
+    } else if(userType == "Operations"){
       runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ? DashboardOperation() :  IntroPage()));
-    } else if(role == "Accounts"){
+    } else if(userType == "Accounts"){
       runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ? DashboardAccount() :  IntroPage()));
     }
   } else {
