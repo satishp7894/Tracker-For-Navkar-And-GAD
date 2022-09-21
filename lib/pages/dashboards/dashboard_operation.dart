@@ -151,7 +151,7 @@ class _DashboardOperationState extends State<DashboardOperation>{
                 color: Colors.black54,
                 height: 20,
                 width: double.infinity,
-                child: Text("tracker for Navkar     version: $versionName",
+                child: Text("tracker for GAD  version: $versionName",
                     style:
                     GoogleFonts.montserrat(
                         textStyle: TextStyle(

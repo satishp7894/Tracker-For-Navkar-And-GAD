@@ -127,7 +127,8 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                             child: Center(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8),
-                                  child: Icon(MyFlutterApp.shipping_container, color: Colors.white, size: 45.0),
+                                  child: Image.asset("assets/glance.png",height: 50,width: 50,)
+                                  // Icon(MyFlutterApp.shipping_container, color: Colors.white, size: 45.0),
                                 )
                             )
                         ),
@@ -190,7 +191,9 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                             child: Center(
                                 child: Padding(
                                   padding: const EdgeInsets.all(8),
-                                  child: Icon(MyFlutterApp.description, color: Colors.white, size: 30.0),
+                                  child:
+                                  Image.asset("assets/billing.png",height: 50,width: 50,)
+                                 // Icon(MyFlutterApp.description, color: Colors.white, size: 30.0),
                                 )
                             )
                         ),
@@ -221,7 +224,8 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                           child: Center(
                               child: Padding(
                                 padding: const EdgeInsets.all(15),
-                                child: Icon(MyFlutterApp.collections, color: Colors.white, size: 30.0),
+                                child: Image.asset("assets/collections.png",height: 50,width: 50,)
+                                // Icon(MyFlutterApp.collections, color: Colors.white, size: 30.0),
                               )
                           )
                       ),
