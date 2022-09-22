@@ -126,30 +126,67 @@ class _PerformancePageState extends State<PerformancePage> {
                                               style: content1,
                                               textAlign: TextAlign.center,),
                                             alignment: Alignment.center,)),
-                                      Expanded(
-                                        child: Container(
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border.all(color: Colors.white),
-                                          ),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              for(int i=0; i<asi.data.performances[0].saleMonthWises.length; i++)
-                                              Expanded(
-                                                child: Container(
-                                                  child: Text('${asi.data.performances[0].saleMonthWises[i].month}',
-                                                    style: content1,
-                                                    textAlign: TextAlign.center,),
-                                                  alignment: Alignment.center,
+                                      // Expanded(
+                                      //   child: Container(
+                                      //     height: 50,
+                                      //     decoration: BoxDecoration(
+                                      //       color: Colors.green,
+                                      //       border: Border.all(color: Colors.white),
+                                      //     ),
+                                      //     child: Row(
+                                      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      //       mainAxisSize: MainAxisSize.min,
+                                      //       children: [
+                                      //         for(int i=0; i<asi.data.performances[0].saleMonthWises.length; i++)
+                                      //         Expanded(
+                                      //           child: Container(
+                                      //             child: Text('${asi.data.performances[0].saleMonthWises[i].month}',
+                                      //               style: content1,
+                                      //               textAlign: TextAlign.center,),
+                                      //             alignment: Alignment.center,
+                                      //           ),
+                                      //         ),
+                                      //       ],
+                                      //     ),
+                                      //   ),
+                                      // ),
+                                      Container(
+                                        height: 50,
+                                        // decoration: BoxDecoration(
+                                        //   color: Colors.green,
+                                        //   border: Border.all(color: Colors.white),
+                                        // ),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            for(int i=0; i<asi.data.performances[0].saleMonthWises.length; i++)
+                                              Container(
+                                                width: 133,
+                                                decoration: const BoxDecoration(
+                                                    color: Colors.green,
+                                                    border: Border(
+                                                      right: BorderSide( //                   <--- right side
+                                                        color: Colors.white,
+                                                      ),
+                                                      top:  BorderSide( //                   <--- right side
+                                                        color: Colors.white,
+                                                      ),
+                                                      bottom: BorderSide( //                   <--- right side
+                                                        color: Colors.white,
+                                                      ),
+                                                    )
+                                                  // border: Border.all(color: Colors.white),
                                                 ),
+                                                child: Text('${asi.data.performances[0].saleMonthWises[i].month}',
+                                                  style: content1,
+                                                  textAlign: TextAlign.center,),
+                                                alignment: Alignment.center,
                                               ),
-                                            ],
-                                          ),
+                                          ],
                                         ),
-                                      ),],
+                                      ),
+                                    ],
                                     leftSideItemBuilder: _generateFirstColumnRow,
                                     rightSideItemBuilder: _generateRightHandSideColumnRow,
                                     itemCount: asi.data.performances.length,
@@ -165,7 +202,9 @@ class _PerformancePageState extends State<PerformancePage> {
                             child: Column(
                               children: [
                                 Container(
+
                                   height: MediaQuery.of(context).size.height,
+                                  width: 800,
                                   child: HorizontalDataTable(
                                     leftHandSideColumnWidth: 100,
                                     rightHandSideColumnWidth: 800,
@@ -181,28 +220,64 @@ class _PerformancePageState extends State<PerformancePage> {
                                               style: content1,
                                               textAlign: TextAlign.center,),
                                             alignment: Alignment.center,)),
-                                      Expanded(
-                                        child: Container(
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border.all(color: Colors.white),
-                                          ),
-                                          child: Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              for(int i=0; i<asc.data.monthHeaders.length; i++)
-                                                Expanded(
-                                                  child: Container(
-                                                    child: Text('${asc.data.monthHeaders[i].month}',
-                                                      style: content1,
-                                                      textAlign: TextAlign.center,),
-                                                    alignment: Alignment.center,
-                                                  ),
+                                      // Expanded(
+                                      //   child: Container(
+                                      //     height: 50,
+                                      //     decoration: BoxDecoration(
+                                      //       color: Colors.green,
+                                      //       border: Border.all(color: Colors.white),
+                                      //     ),
+                                      //     child: Row(
+                                      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      //       mainAxisSize: MainAxisSize.min,
+                                      //       children: [
+                                      //         for(int i=0; i<asc.data.monthHeaders.length; i++)
+                                      //           Expanded(
+                                      //             child: Container(
+                                      //               child: Text('${asc.data.monthHeaders[i].month}',
+                                      //                 style: content1,
+                                      //                 textAlign: TextAlign.center,),
+                                      //               alignment: Alignment.center,
+                                      //             ),
+                                      //           ),
+                                      //       ],
+                                      //     ),
+                                      //   ),
+                                      // ),
+                                      Container(
+                                        height: 50,
+                                        // decoration: BoxDecoration(
+                                        //   color: Colors.green,
+                                        //   border: Border.all(color: Colors.white),
+                                        // ),
+                                        child: Row(
+                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            for(int i=0; i<asc.data.monthHeaders.length; i++)
+                                              Container(
+                                                width: 133,
+                                                decoration: const BoxDecoration(
+                                                    color: Colors.green,
+                                                    border: Border(
+                                                      right: BorderSide( //                   <--- right side
+                                                        color: Colors.white,
+                                                      ),
+                                                      top:  BorderSide( //                   <--- right side
+                                                        color: Colors.white,
+                                                      ),
+                                                      bottom: BorderSide( //                   <--- right side
+                                                        color: Colors.white,
+                                                      ),
+                                                    )
+                                                  // border: Border.all(color: Colors.white),
                                                 ),
-                                            ],
-                                          ),
+                                                child: Text('${asc.data.monthHeaders[i].month}',
+                                                  style: content1,
+                                                  textAlign: TextAlign.center,),
+                                                alignment: Alignment.center,
+                                              ),
+                                          ],
                                         ),
                                       ),],
                                     leftSideItemBuilder: _generateFirstColumnRow1,
@@ -288,7 +363,7 @@ class _PerformancePageState extends State<PerformancePage> {
 
     for(int i=0; i<asc.data.monthHeaders.length; i++)
       for(int j=0; j<asc.data.performances[index].saleMonthWises.length; j++)
-      print("object ${asc.data.monthHeaders[i].month} ==  ${asc.data.performances[0].saleMonthWises[j].month}");
+      // print("object ${asc.data.monthHeaders[i].month} ==  ${asc.data.performances[0].saleMonthWises[j].month}");
 
     return Container(
       color: Colors.black,
@@ -299,7 +374,7 @@ class _PerformancePageState extends State<PerformancePage> {
         children: [
           for(int x =0; x<asc.data.monthHeaders.length; x++)
             for(int j=0; j<asc.data.performances[index].saleMonthWises.length; j++)
-              asc.data.monthHeaders[x].month == asc.data.performances[0].saleMonthWises[j].month ? Expanded(
+              asc.data.monthHeaders[x].month == asc.data.performances[0].saleMonthWises[0].month ? Expanded(
                 child: Container(
                   decoration: BoxDecoration(
                     border: Border(right: BorderSide(color: Colors.white),bottom: BorderSide(color: Colors.white)),
