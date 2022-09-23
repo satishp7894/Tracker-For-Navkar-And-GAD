@@ -295,9 +295,9 @@ class _LoginPageState extends State<LoginPage> with Validator{
       print('LoginID == ${name.text}');
       print('Username == ${name.text}');
       print('Password == ${pass.text}');
-      pr.hide();
+
       if (results['UserID'] != null) {
-        
+        pr.hide();
         SharedPreferences preferences = await SharedPreferences.getInstance();
         preferences.setInt('UserID', results['UserID'] ?? "");
         preferences.setString('EmpID', results['EmpID'] ?? "");
@@ -326,6 +326,7 @@ class _LoginPageState extends State<LoginPage> with Validator{
         //   Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => DashboardAccount()), (Route<dynamic> route) => false);
         // }
       } else {
+        pr.hide();
         Alerts.showAlertAndBack(context, "Login Failed", "Incorrect Name or Password");
       }
     } else {

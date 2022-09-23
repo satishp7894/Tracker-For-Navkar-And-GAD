@@ -24,13 +24,13 @@ void main() async {
   print("object userType $userType");
 
   if (remember != null) {
-    if(userType == "Admin"){
+    //if(userType == "Admin"){
       runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ?  DashboardAdmin() :  IntroPage()));
-    } else if(userType == "Operations"){
-      runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ? DashboardOperation() :  IntroPage()));
-    } else if(userType == "Accounts"){
-      runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ? DashboardAccount() :  IntroPage()));
-    }
+    // } else if(userType == "Operations"){
+    //   runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ? DashboardOperation() :  IntroPage()));
+    // } else if(userType == "Accounts"){
+    //   runApp(MaterialApp( debugShowCheckedModeBanner: false,home: remember!=null ? DashboardAccount() :  IntroPage()));
+    // }
   } else {
     runApp(MaterialApp(
 

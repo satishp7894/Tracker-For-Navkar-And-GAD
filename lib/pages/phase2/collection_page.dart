@@ -65,30 +65,30 @@ class _CollectionPageState extends State<CollectionPage> {
 
   Widget _appBar(){
     return AppBar(
-      leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white,),
-        onPressed: (){
-          // if(globals.Role == "Admin"){
-          //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAdmin()));
-          // }
-          // if(globals.Role == "Accounts"){
-          //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAccount()));
-          // }
-          // if(globals.Role == "Operations"){
-          //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardOperation()));
-          // }
-
-          if(userType == "Admin"){
-            Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAdmin()));
-          }
-          if(userType == "Accounts"){
-            Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAccount()));
-          }
-          if(userType == "Operations"){
-            Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardOperation()));
-          }
-        }
-        ,),
+      // leading: IconButton(
+      //   icon: Icon(Icons.arrow_back, color: Colors.white,),
+      //   onPressed: (){
+      //     // if(globals.Role == "Admin"){
+      //     //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAdmin()));
+      //     // }
+      //     // if(globals.Role == "Accounts"){
+      //     //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAccount()));
+      //     // }
+      //     // if(globals.Role == "Operations"){
+      //     //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardOperation()));
+      //     // }
+      //
+      //     // if(userType == "Admin"){
+      //     //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAdmin()));
+      //     // }
+      //     // if(userType == "Accounts"){
+      //     //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardAccount()));
+      //     // }
+      //     // if(userType == "Operations"){
+      //     //   Navigator.push(context, MaterialPageRoute(builder: (c) => DashboardOperation()));
+      //     // }
+      //   }
+      //   ,),
       backgroundColor: bg,
       centerTitle: true,
       elevation: 0,
