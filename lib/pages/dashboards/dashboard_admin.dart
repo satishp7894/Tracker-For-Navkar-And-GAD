@@ -579,7 +579,7 @@ class _DashboardAdminState extends State<DashboardAdmin>{
               color: Colors.black54,
               height: 20,
               width: double.infinity,
-              child: Text("tracker for Navkar  version: $versionName",
+              child: Text("tracker for Ameya  version: $versionName",
               style:
               GoogleFonts.montserrat(
                   textStyle: TextStyle(

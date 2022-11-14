@@ -1,4 +1,4 @@
-package com.example.navkar_tracker1
+package com.example.ameya
 
 import io.flutter.embedding.android.FlutterActivity
 
