@@ -1,6 +1,7 @@
 class Connection{
 
   static String ip = "http://103.236.154.131:70/api/Navkar/";
+  static String ipNew = "http://122.200.22.58:76/api/Navkar/";
   static String ipc = "http://122.200.19.33:65/api/Navkar/";
   // static String ipcNew = "http://trackermobileapi.gadlogistics.in/api/GAD/";
   // static String ipNew = "http://trackermobileapi.gadlogistics.in/api/GAD/";
@@ -9,18 +10,18 @@ class Connection{
   static String dashboard = ip+"api/Navkar/GetMenuDetails?UserID=";
 
   //ips for ICD
-  static String login = ip+"ValidateLogin";
-  static String detailIcd = ip+"GetDashboardICD";
-  static String dmr = ip+"GetDMR";
+  static String login = ipNew+"ValidateLogin";
+  static String detailIcd = ipNew+"GetDashboardICD";
+  static String dmr = ipNew+"GetDMR";
   // static String dmrNew = ipNew+"GetDMRYardIII";
-  static String ifcOut = ip+"GetCustomerWiseOutStandingAgingICD";
-  static String ifcBill = ip+"GetBillingDMRICD";
-  static String ifcOverall = ip+"GetOverallOutstandingICD";
-  static String ifcCustAeging = ip+"GetOutstandingCustWiseAgingICD";
-  static String totalOutIcd = ip+"GetTotalOutStandingAgingICD";
-  static String kdmIcd = ip+"GetKDMWiseReportForICD";
-  static String collectionIcd = ip+"GetBillingCollectionICD";
-  static String performnaceIcd = ip+"GetSalesPersonMonthlyReportICD";
+  static String ifcOut = ipNew+"GetCustomerWiseOutStandingAgingICD";
+  static String ifcBill = ipNew+"GetBillingDMRICD";
+  static String ifcOverall = ipNew+"GetOverallOutstandingICD";
+  static String ifcCustAeging = ipNew+"GetOutstandingCustWiseAgingICD";
+  static String totalOutIcd = ipNew+"GetTotalOutStandingAgingICD";
+  static String kdmIcd = ipNew+"GetKDMWiseReportForICD";
+  static String collectionIcd = ipNew+"GetBillingCollectionICD";
+  static String performnaceIcd = ipNew+"GetSalesPersonMonthlyReportICD";
 
   //ips for CFS
   static String detailCfs = ipc+"GetDashboardCFS";
