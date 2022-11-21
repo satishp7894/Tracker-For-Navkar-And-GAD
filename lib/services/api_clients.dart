@@ -3,6 +3,7 @@ import '../models/dmr_model.dart';
 
 import 'package:http/http.dart'as http;
 import 'dart:convert';
+import '../models/dmr_model_export.dart';
 import 'connection.dart';
 
 class ApiClient {
@@ -42,6 +43,19 @@ class ApiClient {
     _detailDmr = (DmrModel.fromJson(result));
     //print('dmr details $_detailDmr');
     return _detailDmr;
+  }
+
+  Future<DmrModelExport> getDMRDetailsExport() async {
+    var response = await http.get(Uri.parse(Connection.dmrNewExport));
+    print("url dmrNewExport  ===========${Connection.dmrNewExport}");
+    var result = json.decode(response.body);
+
+    DmrModelExport _detailDmrExport;
+
+
+    _detailDmrExport = (DmrModelExport.fromJson(result));
+    //print('dmr details $_detailDmr');
+    return _detailDmrExport;
   }
 
   Future<DmrModel> getDMRCfs() async {

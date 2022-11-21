@@ -1,6 +1,7 @@
 class Connection{
 
   static String ip = "http://103.236.154.131:70/api/Navkar/";
+  static String ip1 = "http://122.200.22.58:76/api/Navkar/";
   static String ipc = "http://122.200.19.33:65/api/Navkar/";
   static String ipcNew = "http://trackermobileapi.gadlogistics.in/api/GAD/";
   static String ipNew = "http://trackermobileapi.gadlogistics.in/api/GAD/";
@@ -14,8 +15,9 @@ class Connection{
   static String detailIcd = ip+"GetDashboardICD";
   static String dmr = ip+"GetDMR";
   static String dmrNew = ipNew+"GetDMRYardIII";
+  static String dmrNewExport = ipNew+"GetExportDashboard";
   static String ifcOut = ip+"GetCustomerWiseOutStandingAgingICD";
-  static String ifcBill = ip+"GetBillingDMRICD";
+  static String ifcBill = ip1+"GetBillingDMRICD";
   static String ifcOverall = ip+"GetOverallOutstandingICD";
   static String ifcCustAeging = ip+"GetOutstandingCustWiseAgingICD";
   static String totalOutIcd = ip+"GetTotalOutStandingAgingICD";

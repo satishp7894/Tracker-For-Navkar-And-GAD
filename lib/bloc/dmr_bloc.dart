@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import '../models/dmr_model.dart';
+import '../models/dmr_model_export.dart';
 import '../services/api_clients.dart';
 
 class DmrBloc{
@@ -19,6 +20,23 @@ class DmrBloc{
     } on Exception catch(e){
       print(e.toString());
       _dmrController.sink.addError("something went wrong ${e.toString()}");
+    }
+
+  }
+
+  final _dmrControllerExport = StreamController<DmrModelExport>.broadcast();
+
+  Stream<DmrModelExport> get dmrStreamExport => _dmrControllerExport.stream;
+
+  fetchDMRDetailExport() async{
+
+    try{
+      final results = await _apiclient.getDMRDetailsExport();
+      _dmrControllerExport.sink.add(results);
+      print("dmrNew $results");
+    } on Exception catch(e){
+      print(e.toString());
+      _dmrControllerExport.sink.addError("something went wrong ${e.toString()}");
     }
 
   }
