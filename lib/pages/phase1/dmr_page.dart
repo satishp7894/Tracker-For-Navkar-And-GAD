@@ -644,7 +644,7 @@ class _DmrPageState extends State<DmrPage> {
                                 asc.data.ICDExportCartedIn.isEmpty ? Container() : exportDataCarted(asc.data.ICDExportCartedIn,"Carted Vehicles"),
                                 asc.data.ICDExportCartedOut.isEmpty ? Container() : exportDataCarted(asc.data.ICDExportCartedOut,"Carted Out"),
                                 asc.data.ICDExportFactoryOut.isEmpty ? Container() : exportData(asc.data.ICDExportFactoryOut,"Factory Out"),
-                                asc.data.ICDExportDocOut.isEmpty ? Container() : exportData(asc.data.ICDExportDocOut,"Doc Out"),
+                                asc.data.ICDExportDocOut.isEmpty ? Container() : exportData(asc.data.ICDExportDocOut,"Dock Out"),
 
                               ],
                             )
