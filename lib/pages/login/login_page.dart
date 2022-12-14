@@ -46,6 +46,7 @@ class _LoginPageState extends State<LoginPage> with Validator{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bg,
       body: Container(
         alignment: Alignment.center,
         color: bg,
@@ -268,10 +269,37 @@ class _LoginPageState extends State<LoginPage> with Validator{
 
                   ),
                 ),
+
+
               ],
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: Wrap(
+        alignment: WrapAlignment.center,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 40, right: 40),
+            child: Align(
+              // alignment: Alignment.centerLeft,
+              child: Text("Powered by",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                    color: Colors.deepPurple.shade100,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400
+                ),),
+            ),
+          ),
+          SizedBox(height: 5,),
+          Container(
+              color: bg,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 5.0),
+                child: Image.asset("assets/adani_logo.png",height: 80,width: 80,),
+              )),
+        ],
       ),
     );
   }
@@ -284,6 +312,9 @@ class _LoginPageState extends State<LoginPage> with Validator{
       pr.style(message: 'Please wait...',
         progressWidget: Center(child: CircularProgressIndicator()),);
       pr.show();
+      print("Connection.login URL========== ${Connection.login}");
+      print("name.text ========== ${name.text}");
+      print("pass.text========== ${pass.text}");
       var response = await http.post(Uri.parse(Connection.login), body: {
       'LoginID':name.text,
       'Password':pass.text

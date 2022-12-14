@@ -1,7 +1,8 @@
 class Connection{
 
   static String ip = "http://103.236.154.131:70/api/Navkar/";
-  static String ipNew = "http://122.200.22.58:76/api/Navkar/";
+  // static String ipNew = "http://122.200.22.58:76/api/Navkar/";
+  static String ipNew = "http://103.236.154.131:97/api/Navkar/";
   static String ipc = "http://122.200.19.33:65/api/Navkar/";
   // static String ipcNew = "http://trackermobileapi.gadlogistics.in/api/GAD/";
   // static String ipNew = "http://trackermobileapi.gadlogistics.in/api/GAD/";
@@ -22,6 +23,11 @@ class Connection{
   static String kdmIcd = ipNew+"GetKDMWiseReportForICD";
   static String collectionIcd = ipNew+"GetBillingCollectionICD";
   static String performnaceIcd = ipNew+"GetSalesPersonMonthlyReportICD";
+
+  static String getLocation = ipNew+"GetYardLocation";
+  static String saveLocation = ipNew+"InsertYardData";
+  static String getSearchContainer = ipNew+"GetSearchContainerNoYard";
+  static String getYardDataSummary = ipNew+"GetYardDataSummary";
 
   //ips for CFS
   static String detailCfs = ipc+"GetDashboardCFS";

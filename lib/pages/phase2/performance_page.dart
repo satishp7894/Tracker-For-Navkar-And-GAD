@@ -197,99 +197,99 @@ class _PerformancePageState extends State<PerformancePage> {
                                 SizedBox(height: 20,),
                               ],),
                           ): Container(),
-                          asc.data.performances.isNotEmpty ? Container(
-                            padding: EdgeInsets.only(left: 10, right: 10),
-                            child: Column(
-                              children: [
-                                Container(
-
-                                  height: MediaQuery.of(context).size.height,
-                                  width: 800,
-                                  child: HorizontalDataTable(
-                                    leftHandSideColumnWidth: 100,
-                                    rightHandSideColumnWidth: 800,
-                                    isFixedHeader: true,
-                                    headerWidgets:[
-                                      Container(
-                                          height: 50,
-                                          decoration: BoxDecoration(
-                                            color: Colors.green,
-                                            border: Border.all(color: Colors.white),),
-                                          child: Container(
-                                            child: Text('Sales Person',
-                                              style: content1,
-                                              textAlign: TextAlign.center,),
-                                            alignment: Alignment.center,)),
-                                      // Expanded(
-                                      //   child: Container(
-                                      //     height: 50,
-                                      //     decoration: BoxDecoration(
-                                      //       color: Colors.green,
-                                      //       border: Border.all(color: Colors.white),
-                                      //     ),
-                                      //     child: Row(
-                                      //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                      //       mainAxisSize: MainAxisSize.min,
-                                      //       children: [
-                                      //         for(int i=0; i<asc.data.monthHeaders.length; i++)
-                                      //           Expanded(
-                                      //             child: Container(
-                                      //               child: Text('${asc.data.monthHeaders[i].month}',
-                                      //                 style: content1,
-                                      //                 textAlign: TextAlign.center,),
-                                      //               alignment: Alignment.center,
-                                      //             ),
-                                      //           ),
-                                      //       ],
-                                      //     ),
-                                      //   ),
-                                      // ),
-                                      Container(
-                                        height: 50,
-                                        // decoration: BoxDecoration(
-                                        //   color: Colors.green,
-                                        //   border: Border.all(color: Colors.white),
-                                        // ),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            for(int i=0; i<asc.data.monthHeaders.length; i++)
-                                              Container(
-                                                width: 133,
-                                                decoration: const BoxDecoration(
-                                                    color: Colors.green,
-                                                    border: Border(
-                                                      right: BorderSide( //                   <--- right side
-                                                        color: Colors.white,
-                                                      ),
-                                                      top:  BorderSide( //                   <--- right side
-                                                        color: Colors.white,
-                                                      ),
-                                                      bottom: BorderSide( //                   <--- right side
-                                                        color: Colors.white,
-                                                      ),
-                                                    )
-                                                  // border: Border.all(color: Colors.white),
-                                                ),
-                                                child: Text('${asc.data.monthHeaders[i].month}',
-                                                  style: content1,
-                                                  textAlign: TextAlign.center,),
-                                                alignment: Alignment.center,
-                                              ),
-                                          ],
-                                        ),
-                                      ),],
-                                    leftSideItemBuilder: _generateFirstColumnRow1,
-                                    rightSideItemBuilder: _generateRightHandSideColumnRow1,
-                                    itemCount: asc.data.performances.length,
-                                    rightHandSideColBackgroundColor: Colors.black,
-                                    leftHandSideColBackgroundColor: Colors.black,
-                                  ),
-                                ),
-                                SizedBox(height: 20,),
-                              ],),
-                          ): Container(),
+                          // asc.data.performances.isNotEmpty ? Container(
+                          //   padding: EdgeInsets.only(left: 10, right: 10),
+                          //   child: Column(
+                          //     children: [
+                          //       Container(
+                          //
+                          //         height: MediaQuery.of(context).size.height,
+                          //         width: 800,
+                          //         child: HorizontalDataTable(
+                          //           leftHandSideColumnWidth: 100,
+                          //           rightHandSideColumnWidth: 800,
+                          //           isFixedHeader: true,
+                          //           headerWidgets:[
+                          //             Container(
+                          //                 height: 50,
+                          //                 decoration: BoxDecoration(
+                          //                   color: Colors.green,
+                          //                   border: Border.all(color: Colors.white),),
+                          //                 child: Container(
+                          //                   child: Text('Sales Person',
+                          //                     style: content1,
+                          //                     textAlign: TextAlign.center,),
+                          //                   alignment: Alignment.center,)),
+                          //             // Expanded(
+                          //             //   child: Container(
+                          //             //     height: 50,
+                          //             //     decoration: BoxDecoration(
+                          //             //       color: Colors.green,
+                          //             //       border: Border.all(color: Colors.white),
+                          //             //     ),
+                          //             //     child: Row(
+                          //             //       mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //             //       mainAxisSize: MainAxisSize.min,
+                          //             //       children: [
+                          //             //         for(int i=0; i<asc.data.monthHeaders.length; i++)
+                          //             //           Expanded(
+                          //             //             child: Container(
+                          //             //               child: Text('${asc.data.monthHeaders[i].month}',
+                          //             //                 style: content1,
+                          //             //                 textAlign: TextAlign.center,),
+                          //             //               alignment: Alignment.center,
+                          //             //             ),
+                          //             //           ),
+                          //             //       ],
+                          //             //     ),
+                          //             //   ),
+                          //             // ),
+                          //             Container(
+                          //               height: 50,
+                          //               // decoration: BoxDecoration(
+                          //               //   color: Colors.green,
+                          //               //   border: Border.all(color: Colors.white),
+                          //               // ),
+                          //               child: Row(
+                          //                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          //                 mainAxisSize: MainAxisSize.min,
+                          //                 children: [
+                          //                   for(int i=0; i<asc.data.monthHeaders.length; i++)
+                          //                     Container(
+                          //                       width: 133,
+                          //                       decoration: const BoxDecoration(
+                          //                           color: Colors.green,
+                          //                           border: Border(
+                          //                             right: BorderSide( //                   <--- right side
+                          //                               color: Colors.white,
+                          //                             ),
+                          //                             top:  BorderSide( //                   <--- right side
+                          //                               color: Colors.white,
+                          //                             ),
+                          //                             bottom: BorderSide( //                   <--- right side
+                          //                               color: Colors.white,
+                          //                             ),
+                          //                           )
+                          //                         // border: Border.all(color: Colors.white),
+                          //                       ),
+                          //                       child: Text('${asc.data.monthHeaders[i].month}',
+                          //                         style: content1,
+                          //                         textAlign: TextAlign.center,),
+                          //                       alignment: Alignment.center,
+                          //                     ),
+                          //                 ],
+                          //               ),
+                          //             ),],
+                          //           leftSideItemBuilder: _generateFirstColumnRow1,
+                          //           rightSideItemBuilder: _generateRightHandSideColumnRow1,
+                          //           itemCount: asc.data.performances.length,
+                          //           rightHandSideColBackgroundColor: Colors.black,
+                          //           leftHandSideColBackgroundColor: Colors.black,
+                          //         ),
+                          //       ),
+                          //       SizedBox(height: 20,),
+                          //     ],),
+                          // ): Container(),
                         ]
                     ),
                   );
@@ -401,7 +401,8 @@ class DescriptionView extends StatefulWidget {
 }
 
 class _DescriptionViewState extends State<DescriptionView> {
-  List<String> _detailTypes = ['ICD', 'CFS'];
+  // List<String> _detailTypes = ['ICD', 'CFS'];
+  List<String> _detailTypes = ['ICD'];
   PageController _pageController;
   List<double> _heights;
   int _currentPage = 0;
@@ -448,7 +449,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           child: _currentPage == i ?
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             child: Center(
                               child: Text('${_detailTypes[i]}', style: optionStyle, textAlign: TextAlign.center,),
@@ -456,7 +457,7 @@ class _DescriptionViewState extends State<DescriptionView> {
                           ) :
                           Container(
                             alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width / 2,
+                            width: MediaQuery.of(context).size.width,
                             height: 30,
                             margin: EdgeInsets.only(left: 8),
                             //color: footer1,

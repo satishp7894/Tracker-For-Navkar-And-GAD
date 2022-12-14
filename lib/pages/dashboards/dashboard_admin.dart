@@ -3,6 +3,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:navkar_tracker/pages/phase2/mark_location.dart';
 import 'package:package_info/package_info.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -65,58 +66,59 @@ class _DashboardAdminState extends State<DashboardAdmin>{
         backgroundColor: Colors.black54,
           appBar: _appBar(),
           body:
-          Column(
+          ListView(
             // crossAxisCount: 2,
             // crossAxisSpacing: 10.0,
             // mainAxisSpacing: 10.0,
             //padding: EdgeInsets.all(8),
             children: <Widget>[
-              SizedBox(height: 10,),
-              Container(height: 100,
-                  width: MediaQuery.of(context).size.width,
-                  child:
-              _buildTile(
-                Container(
-                  height:100,
+              // SizedBox(height: 10,),
+              // Container(height: 100,
+              //     width: MediaQuery.of(context).size.width,
+              //     child:
+              // _buildTile(
+              //   Container(
+              //     height:100,
+              //
+              //   child: Padding(
+              //     padding: const EdgeInsets.all(10),
+              //     child: Row(
+              //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //         crossAxisAlignment: CrossAxisAlignment.center,
+              //         mainAxisSize: MainAxisSize.min,
+              //         children: <Widget>[
+              //           Column(
+              //             mainAxisAlignment: MainAxisAlignment.center,
+              //             crossAxisAlignment: CrossAxisAlignment.start,
+              //             children: <Widget>[
+              //               //Text('Container Freight Stations', style: TextStyle(color: Colors.blueAccent)),
+              //               Text('Combined\nMovement Report',
+              //                 //textAlign: TextAlign.center,
+              //                 style: GoogleFonts.montserrat(
+              //                     textStyle: TextStyle(
+              //                       fontSize: 20,
+              //                       fontWeight: FontWeight.w500,
+              //                       color: Colors.black,)),
+              //               )
+              //             ],
+              //           ),
+              //           Material(
+              //               color: Colors.blue,
+              //               shape: CircleBorder(),
+              //               child: Center(
+              //                   child: Padding(
+              //                     padding: const EdgeInsets.all(12),
+              //                     child: Image.asset("assets/report.png",height: 47,width: 47,),
+              //                     //Icon(MyFlutterApp.container, color: Colors.white, size: 45.0),
+              //                   )
+              //               )
+              //           )
+              //         ]
+              //     ),
+              //   )),
+              //   onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CombinePage())),
+              // )),
 
-                child: Padding(
-                  padding: const EdgeInsets.all(10),
-                  child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: <Widget>[
-                        Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            //Text('Container Freight Stations', style: TextStyle(color: Colors.blueAccent)),
-                            Text('Combined\nMovement Report',
-                              //textAlign: TextAlign.center,
-                              style: GoogleFonts.montserrat(
-                                  textStyle: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w500,
-                                    color: Colors.black,)),
-                            )
-                          ],
-                        ),
-                        Material(
-                            color: Colors.blue,
-                            shape: CircleBorder(),
-                            child: Center(
-                                child: Padding(
-                                  padding: const EdgeInsets.all(12),
-                                  child: Image.asset("assets/report.png",height: 47,width: 47,),
-                                  //Icon(MyFlutterApp.container, color: Colors.white, size: 45.0),
-                                )
-                            )
-                        )
-                      ]
-                  ),
-                )),
-                onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => CombinePage())),
-              )),
               SizedBox(height: 10,),
           Row(children: [ Container(height: 150,
               width: MediaQuery.of(context).size.width/2-5,
@@ -336,6 +338,46 @@ class _DashboardAdminState extends State<DashboardAdmin>{
                 ),
                 onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => PerformancePage())),
             )),
+              SizedBox(height: 10,),
+              Container(height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  child:_buildTile(
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text('Mark\nLocation',
+                                  //textAlign: TextAlign.center,
+                                  style: GoogleFonts.montserrat(
+                                      textStyle: TextStyle(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w500,
+                                        color: Colors.black,)),
+                                ),
+                              ]
+                          ),
+                          Material(
+                              color: Colors.cyan,
+                              shape: CircleBorder(),
+                              child: Center(
+                                  child: Padding(
+                                      padding: const EdgeInsets.all(15),
+                                      child: Image.asset("assets/mark_location.png",height: 40,width: 40,)
+                                    //Icon(MyFlutterApp.person, color: Colors.white, size: 45.0),
+                                  )
+                              )
+                          ),
+                        ],
+                      ),
+                    ),
+                    onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => MarkLocationPage())),
+                  )),
             ],
             /*staggeredTiles: [
               StaggeredTile.extent(2, 100.0),
@@ -572,22 +614,24 @@ class _DashboardAdminState extends State<DashboardAdmin>{
           //     StaggeredTile.extent(2, 100.0),
           //   ],*/
           // ),
-          bottomSheet: SafeArea(
-            child: Container(
-              padding: EdgeInsets.only(bottom: 3, top: 3),
-              alignment: Alignment.bottomCenter,
-              color: Colors.black54,
-              height: 20,
-              width: double.infinity,
-              child: Text("tracker for Navkar  version: $versionName",
-              style:
-              GoogleFonts.montserrat(
-                  textStyle: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black,))
-              )
-            ),
+          bottomSheet: Wrap(
+            children: [
+              Container(
+                padding: EdgeInsets.only(bottom: 3, top: 3),
+                color: Colors.black54,
+                height: 20,
+                child: Center(
+                  child: Text("tracker for Adani ICD Tumb  version: $versionName",
+                  style:
+                  GoogleFonts.montserrat(
+                      textStyle: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.black,))
+                  ),
+                )
+              ),
+            ],
           )
       ),
     );
