@@ -407,7 +407,7 @@ class _MarkLocationPageState extends State<MarkLocationPage> {
           fontSize: 16.0
       );
     }else{
-      print("Connection.saveLocation URL========== ${"${Connection.saveLocation}?LocationID=${markLocationValue.locationID}&AddedBy=0&ContainerNo=${controllerContainerNo.text}"}");
+      print("Connection.saveLocation URL========== ${"${Connection.saveLocation}?LocationID=${markLocationValue.locationID}&AddedBy=1&ContainerNo=${controllerContainerNo.text}"}");
       print("markLocationValue.locationID ====================> ${markLocationValue.locationID}");
       print("controllerContainerNo.text ============> ${controllerContainerNo.text}");
       ProgressDialog pr = ProgressDialog(context,
@@ -415,19 +415,41 @@ class _MarkLocationPageState extends State<MarkLocationPage> {
       pr.style(message: 'Please wait...',
         progressWidget: Center(child: CircularProgressIndicator()),);
       await pr.show();
-      var response = await http.post(Uri.parse("${Connection.saveLocation}?LocationID=${markLocationValue.locationID}&AddedBy=0&ContainerNo=${controllerContainerNo.text}"));
+      var response = await http.post(Uri.parse("${Connection.saveLocation}?LocationID=${markLocationValue.locationID}&AddedBy=1&ContainerNo=${controllerContainerNo.text}"));
       var results = json.decode(response.body);
       print('response == $results ');
       pr.hide();
-      Fluttertoast.showToast(
-          msg: results["Messege"],
-          toastLength: Toast.LENGTH_LONG,
-          gravity: ToastGravity.BOTTOM,
-          timeInSecForIosWeb: 1,
-          // backgroundColor: Colors.red,
-          textColor: Colors.white,
-          fontSize: 16.0
-      );
+      if(response.statusCode == 200){
+
+        setState(() {
+          controllerContainerNo.clear();
+          markContainerNoValue = MarkLocation();
+          markLocationValue = null;
+          focusNode.requestFocus();
+        });
+
+        Fluttertoast.showToast(
+            msg: results["Messege"],
+            toastLength: Toast.LENGTH_LONG,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            // backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
+
+      }else{
+        Fluttertoast.showToast(
+            msg: results["Messege"],
+            toastLength: Toast.LENGTH_LONG,
+            gravity: ToastGravity.BOTTOM,
+            timeInSecForIosWeb: 1,
+            // backgroundColor: Colors.red,
+            textColor: Colors.white,
+            fontSize: 16.0
+        );
+
+      }
 
 
 
