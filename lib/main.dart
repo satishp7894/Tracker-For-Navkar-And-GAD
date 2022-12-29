@@ -22,6 +22,7 @@ void main() async {
   String role = prefs.getString('Role');
 
   print("object role $role");
+  print("object role $role");
 
   if (remember != null) {
     if(role == "Admin"){
